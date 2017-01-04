@@ -1,0 +1,17 @@
+{
+  "name": "sorting_playground",
+  "homepage": "https://github.com/dtbrad/sorting_playground",
+  "authors": [
+    "danieltbrad <danieltbrad@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
