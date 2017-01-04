@@ -1,1 +1,18 @@
-Hi there!!
+<table id="productsTable" class="table table-hover">
+  <thead>
+    <tr class="fake-link">
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Year Released</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td> <%= product.model %> </td>
+        <td> <%= product.brand %> </td>
+        <td> <%= product.release_year %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
