@@ -1,16 +1,16 @@
 <table id="productsTable" class="table table-hover">
   <thead>
     <tr class="fake-link">
-      <th>Brand</th>
-      <th>Model</th>
-      <th>Year Released</th>
+      <th><%= sortable("brand") %></th>
+      <th><%= sortable("model") %></th>
+      <th><%= sortable("release_year", "Year of Release") %></th>
     </tr>
   </thead>
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td> <%= product.model %> </td>
         <td> <%= product.brand %> </td>
+        <td> <%= product.model %> </td>
         <td> <%= product.release_year %> </td>
       </tr>
     <% end %>
