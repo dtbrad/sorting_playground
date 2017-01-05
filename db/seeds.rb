@@ -1,8 +1,8 @@
-Product.create(model: "IPhone", brand: "Apple", release_year: 2008)
-Product.create(model: "Note", brand: "Samsung", release_year: 2010)
-Product.create(model: "Rockr", brand: "Motorola", release_year: 2007)
-Product.create(model: "IPad", brand: "Apple", release_year: 2009)
-Product.create(model: "Watch", brand: "Apple", release_year: 2015)
+Product.create(model: "IPhone", brand: "Apple", release_year: 2001)
+Product.create(model: "Note", brand: "Samsung", release_year: 2002)
+Product.create(model: "Rockr", brand: "Motorola", release_year: 2003)
+Product.create(model: "IPad", brand: "Apple", release_year: 2004)
+Product.create(model: "Watch", brand: "Apple", release_year: 2005)
 Product.create(model: "Thermopen", brand: "Thermoworks", release_year: 2006)
 
 LineItem.create(product_id: 1, quantity: 4, price: 500)

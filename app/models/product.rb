@@ -5,22 +5,25 @@ class Product < ApplicationRecord
     LineItem.where(product: self).total_spent
   end
 
-  def self.sorted_array
-    joins(:line_items).group('products.id').order('SUM(quantity)')
+  def self.sorted_array(direction)
+    if direction == 'desc'
+      joins(:line_items).group('products.id').order('SUM(quantity) desc')
+    else
+      joins(:line_items).group('products.id').order('SUM(quantity) asc')
+    end
   end
 
   def qty_purchased
     line_items.where(product: self).sum(:quantity)
   end
 
-  def self.custom_sort(category, dir)
+  def self.custom_sort(category, direction)
     if category == "qty_purchased"
-      products = Product.sorted_array
+      products = Product.sorted_array(direction)
     elsif Product.column_names.include?(category)
-      products = Product.order(category)
+      products = Product.order(category + " " + direction)
     else
       products = Product.all
     end
-    dir == "desc" ? products.reverse : products
   end
 end
