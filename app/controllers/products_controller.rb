@@ -2,13 +2,13 @@ class ProductsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
-    @products = Product.order(sort_column + " " + sort_direction)
+    @products = Product.custom_sort(sort_column, sort_direction)
   end
 
   private
 
   def sort_column
-    Product.column_names.include?(params[:sort]) ? params[:sort] : "model"
+    params[:sort]
   end
 
   def sort_direction
